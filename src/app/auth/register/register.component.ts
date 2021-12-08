@@ -32,6 +32,7 @@ export class RegisterComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.createProfileForm();
+    console.log('Attempting to get data of countries');
     const countryData = await this.apiService.getCountriesList().toPromise();
 
     this.countries = countryData.result;

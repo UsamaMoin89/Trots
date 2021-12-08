@@ -45,12 +45,14 @@ export class ApiServiceService {
 
   getCountriesList(): Observable<any> {
     try {
+      console.log('get data of countries from API');
       const headers = {
         'content-type': 'application/json',
         apikey: this.envData.apiAccessKey
       };
       const url = `${this.envData.apiConn}Country/getall`;
 
+      console.log('url', url);
       return this.httpClient.get(url, {headers});
     } catch (err) {
       console.log('Error while retrieving data', err);
