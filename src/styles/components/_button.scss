@@ -1,0 +1,41 @@
+button[disabled] {
+  opacity: 0.8;
+  transition: .5s;
+}
+
+.ui-button {
+  padding: 13px 38px;
+  letter-spacing: 1.5px;
+  border: unset;
+  font-size: 20px;
+  border-radius: 11px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-text {
+    padding: 0 !important;
+  }
+
+  &-primary {
+    border-color: $primary;
+    background-image: $btn-primary;
+    color: $white;
+  }
+
+  &-secondary {
+    background: $secondary-bg;
+    color: $greytext;
+  }
+
+  &-maroon {
+    background: $maroon;
+    color: $white;
+  }
+
+  &-rounded {
+    border-radius: 24px;
+    border: none;
+  }
+}

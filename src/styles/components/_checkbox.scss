@@ -1,0 +1,22 @@
+p-checkbox {
+  label {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .ui-chkbox {
+    margin-right: 0;
+
+    .ui-chkbox-box {
+      border: 1px solid $inputtext;
+      transition: .3s;
+
+      &.ui-state-active {
+        border: 1px solid $primary;
+        color: $white;
+        background: $primary;
+      }
+    }
+
+  }
+}

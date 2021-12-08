@@ -1,0 +1,90 @@
+@import "../variables";
+
+.has-error .ui-dropdown {
+  border-color: $danger !important;
+}
+
+
+.ui-dropdown-panel {
+  background: $white;
+  min-width: 250px !important;
+  margin-top: 0 !important;
+  max-width: 100% !important;
+
+
+  .ui-dropdown-list {
+    padding: 0 !important;
+  }
+}
+
+p-dropdown {
+
+  &.ng-invalid.ng-touched {
+    .ui-dropdown {
+      border-color: $danger !important;
+    }
+  }
+
+  .ui-dropdown {
+    width: 100%;
+    min-width: 100px;
+    padding: 2px;
+    border-radius: 5px;
+    background: $white;
+    display: block;
+
+    border: 1.5px solid $inputborder;
+
+
+
+    &.ui-state-disabled {
+      background: $greytext;
+    }
+
+    &-item {
+      padding: 8px 10px !important;
+      transition: .3s;
+      margin: 0;
+
+      &:hover {
+        //background: $light-grey !important;
+      }
+
+      &.ui-state-highlight {
+        //background: $light-grey !important;
+      }
+    }
+
+    &-label {
+      padding-left: .5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-filter {
+      border: none;
+      border-bottom: 1px solid $greytext;
+    }
+
+    &-trigger {
+      right: 10px !important;
+    }
+
+    &.round-dropdown {
+      border-radius: 20px;
+      width: 190px;
+      height: 43px;
+
+      .ui-dropdown-label-container {
+        margin-left: 10px;
+        margin-right: 10px;
+
+        .ui-dropdown-label {
+          padding-left: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+}

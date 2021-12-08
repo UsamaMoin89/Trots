@@ -1,0 +1,75 @@
+.ui-radiobutton {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+
+  .ui-radiobutton-box {
+    border: 1.5px solid rgba(79, 152, 228, 0.78);
+    background-color: $white;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 50%;
+
+    &.ui-state-focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: 0 0 0 0.2em $sidebar-hover-light-blue;
+      border-color: $blue-bg;
+    }
+
+    &.ui-state-active {
+      border-color: $blue-bg;
+      //background-color: $blue-bg;
+      color: $white;
+
+      .ui-radiobutton-icon {
+        //background-color: $primary;
+        background-image: $btn-radio;
+      }
+
+
+      &:not(.ui-state-disabled):hover {
+        border-color: $primary;
+        //background-color: $primary;
+        color: $white;
+      }
+    }
+
+    .ui-radiobutton-icon {
+      background: transparent;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -5px;
+      margin-top: -5px;
+      transition: background-color 0.2s;
+      border-radius: 50%;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .ui-radiobutton-box:not(.ui-state-disabled):not(.ui-state-active):hover {
+    border-color: $darker-grey;
+  }
+}
+
+.ui-radiobutton-label {
+  margin-left: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.055em;
+  color: #333333;
+}

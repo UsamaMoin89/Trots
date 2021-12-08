@@ -1,0 +1,40 @@
+.ui-tabmenu {
+  border-bottom: 2px solid $secondary-bg;
+
+  &-nav {
+
+  }
+
+  &item {
+    margin: 0 !important;
+    outline: none;
+
+    &.ui-menuitem-link-active, &.ui-state-active {
+
+      .ui-menuitem-link {
+        border-bottom: 2px solid $primary !important;
+
+        .ui-menuitem-text {
+          color: $primary;
+        }
+      }
+    }
+
+    .ui-menuitem-link {
+      width: 167px;
+      border-bottom: 1px solid transparent;
+      text-align: center;
+      outline: none;
+      transition: .4s;
+
+      .ui-menuitem-text {
+        color: $darktext;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,41 @@
+@import "../variables";
+
+input[readonly] {
+  background: $inputbg;
+}
+
+input, textarea {
+  background: $inputbg;
+  font-size: 18px;
+
+  &.ui-inputtext {
+    border: 1px solid $inputborder !important;
+  }
+
+  &::placeholder {
+    color: $inputtext;
+    opacity: 0.5;
+  }
+}
+
+.ui-inputtext {
+  background-color: $white;
+  width: 100%;
+  border: 1px solid transparent !important;
+  transition: .4s;
+  display: block;
+  color: $bodytext;
+
+  &.ng-dirty.ng-invalid, &.ng-touched.ng-invalid {
+    border-color: $danger !important;
+  }
+
+  &.rad-10 {
+    border-radius: 10px !important;
+  }
+}
+
+textarea {
+  border-radius: 10px;
+  resize: none;
+}

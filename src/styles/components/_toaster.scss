@@ -1,0 +1,34 @@
+.ui-toast {
+
+  &-message {
+    margin: 0 !important;
+    padding: 0;
+
+    &-content {
+      color: $white;
+    }
+
+    &-success {
+      background: $success;
+    }
+
+    &-error {
+      background: $danger;
+    }
+  }
+
+  &-summary {
+    padding-bottom: 0 !important;
+  }
+
+  &-detail {
+    padding-top: 2px;
+  }
+
+  &-close-icon {
+    top: 13px !important;
+    right: 13px !important;
+    color: $white !important;
+  }
+
+}

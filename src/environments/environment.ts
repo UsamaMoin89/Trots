@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiConn: 'http://74.208.176.115/trotsapi/',
+  apiAccessKey: 'VHIwdDUuQFBJLnZAMS5WMYB3DuN3INEzcMWb0T8POHY='
 };
 
 /*

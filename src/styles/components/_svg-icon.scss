@@ -1,0 +1,62 @@
+svg-icon {
+  display: flex;
+  &.pen {
+    svg{
+      height: 29px;
+    }
+  }
+  &.whatsapp {
+    svg, g, path {
+      fill: $white;
+    }
+
+    &.inverse {
+      svg, g, path {
+        fill: $white !important;
+      }
+    }
+  }
+
+  &.messenger, &.facebook {
+    svg, g, path {
+      //fill: $primary !important;
+      fill: $btn-primary !important;
+    }
+
+    path {
+      &.white {
+        fill: $white !important;
+      }
+    }
+
+    &.inverse {
+      svg, g, path {
+        fill: $white !important;
+      }
+
+      path {
+        &.white {
+          //fill: $primary !important;
+          fill: $btn-primary !important;
+        }
+      }
+    }
+  }
+
+  &.edit-action {
+    cursor: pointer;
+
+    svg {
+      //fill: $primary;
+      fill: $btn-primary;
+    }
+  }
+
+  &.delete-action {
+    cursor: pointer;
+
+    svg {
+      fill: $maroon;
+    }
+  }
+}

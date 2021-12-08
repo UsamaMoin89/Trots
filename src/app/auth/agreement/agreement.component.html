@@ -1,0 +1,53 @@
+<app-overlay *ngIf="isLoading"></app-overlay>
+<div class="container-wrapper">
+  <div class="col-lg-12 col-md-12 col-sm-12 flex-column align-items-center justify-content-center">
+    <div class="d-flex justify-content-center mt-25">
+      <svg-icon name="page-logo"></svg-icon>
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
+      <div class="col-lg-9 col-md-12 col-sm-12 agreement-bg">
+        <div class="agreement-section">
+          <h3 class="section-heading">Your Account</h3>
+          <span class="description mt-20">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+          </span>
+
+          <div class="mt-50">
+            <div>
+              <p-checkbox label="I accept terms & Condition" [binary]="true" [(ngModel)]="acceptTerms"></p-checkbox>
+            </div>
+
+            <div class="mt-40 col-lg-6 col-md-12 col-sm-12 p-unset">
+              <input type="text" pInputText id="eSig" placeholder="Testing" [(ngModel)]="eSig">
+            </div>
+
+            <div class="mt-40">
+              <p-checkbox label="Use this as E-Signature" [binary]="true" [(ngModel)]="useESig"></p-checkbox>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-30">
+      <div class="col-lg-9 col-md-12 col-sm-12 agreement-footer">
+        <div>
+          <button class="btn-back ui-button-primary" (click)="navigateToUrl('subjects')" pButton label="Back" type="button">
+            <svg-icon name="back"></svg-icon>
+          </button>
+        </div>
+
+        <div>
+          <button class="btn-next ui-button-primary" (click)="navigateToUrl('attempt-test')" pButton label="Next" type="button">
+            <svg-icon name="next"></svg-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

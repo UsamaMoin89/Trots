@@ -1,0 +1,242 @@
+.subject-bg {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+
+  .subject-section {
+    padding: 30px 70px;
+
+    .heading {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 33px;
+      letter-spacing: 0.055em;
+      color: #333333;
+    }
+
+    .listing {
+      margin-top: 30px;
+      border-radius: 8px;
+      border: 1px solid rgba(202, 41, 249, 0.3);
+      padding: 15px 40px;
+      max-height: 380px;
+    }
+
+    .add-subject {
+      margin-top: 25px;
+      height: 48px;
+      background: rgba(79, 152, 228, 0.8);
+      border-radius: 11px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .cat-list {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .list-heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.055em;
+        color: #333333;
+      }
+
+      .cat-list-data {
+        max-height: 300px;
+        overflow-x: unset;
+        overflow-y: auto;
+
+        .list-data {
+          cursor: pointer;
+        }
+      }
+
+      .cat-list-data::-webkit-scrollbar {
+        width: 3px;
+      }
+    }
+
+    .subject-listing {
+      overflow-x: unset;
+      overflow-y: auto;
+      max-height: 500px;
+
+      .subject-item {
+        margin: 10px auto;
+      }
+
+      .sub-heading {
+        text-align: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.055em;
+        color: #FFFFFF;
+        background: linear-gradient(90.18deg, rgba(79, 152, 228, 0.6) 6.64%, rgba(202, 41, 249, 0.6) 99.84%);
+        border-radius: 10px 10px 0 0;
+      }
+
+      .sub-description {
+        display: flex;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding-bottom: 30px;
+        flex-direction: column;
+      }
+    }
+
+  }
+}
+
+.footer {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: green;
+  cursor: pointer;
+}
+
+.nav-item>a:hover {
+  color: green;
+}
+
+.navbar-nav>.active>a {
+  background-color: #C0C0C0;
+  color: green;
+}
+
+.border-right {
+  border: 1px solid #FFFFFF;
+  max-height: 35px;
+  position: relative;
+  width: 1px;
+  top: 6px;
+}
+
+.subject-dot {
+  width: 7px;
+  height: 7px;
+  color: #4F98E4;
+  background: #4F98E4;
+  border-radius: 50%;
+}
+
+:host ::ng-deep {
+  .ui-radiobutton .ui-radiobutton-box {
+    color: #ffffff;
+    border: unset;
+  }
+
+  .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+    background: #4F98E4;
+    color: #4F98E4;
+    border-color: #4F98E4;
+    font-size: 16px;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: -7px;
+  }
+
+  .ui-radiobutton-label {
+    margin-left: 8px;
+    margin-bottom: 2px;
+    letter-spacing: 0.055em;
+    color: rgba(51, 51, 51, 0.59);
+    max-width: 220px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+
+  .ui-label-active {
+    color: rgba(79, 152, 228, 1);
+  }
+
+  .file-selection-box {
+    max-height: 82px;
+
+    span {
+      font-size: 13px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      color: #C4C4C4;
+    }
+
+    img {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  p-inputmask {
+    input {
+      border-radius: 31px;
+      height: 43px;
+      font-size: 16px;
+      text-align: center;
+      padding: unset;
+    }
+  }
+}
+
+.selected-list {
+  margin: auto;
+  padding: 20px 0 0 !important;
+}
+
+.dashed {
+  background: #333333;
+  width: 10px;
+  height: 2px;
+  line-height: 19px;
+}
+
+.detail-heading {
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.055em;
+  color: #333333;
+  text-align: center;
+}
+
+.detail-info {
+  border-radius: 31px;
+  height: 43px;
+  font-size: 16px;
+  text-align: center;
+  padding: unset;
+}
+
+.certificate-upload {
+  padding: unset;
+  margin: 20px auto 0;
+}
+
+.field-spilt {
+  border-right: 5px solid #333333;
+  position: relative;
+  top: 70px;
+  left: -5 px;
+  max-height: 2px;
+}

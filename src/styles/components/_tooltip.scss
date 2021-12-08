@@ -1,0 +1,19 @@
+.ui-tooltip {
+  .ui-tooltip-text {
+    border-radius: 10px;
+    font-size: 10px !important;
+    //background: $primary;
+    background-image: linear-gradient($primary, $primary-gradient-2);
+    color: $white;
+    padding: 10px;
+  }
+
+  .ui-tooltip-arrow {
+    border-top-color: $primary;
+  }
+
+  .ui-tooltip-text.ui-shadow.ui-corner-all {
+    //background: $primary;
+    background-image: linear-gradient($primary, $primary-gradient-2);
+  }
+}

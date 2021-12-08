@@ -1,0 +1,87 @@
+<app-overlay *ngIf="isLoading"></app-overlay>
+<div class="container-wrapper">
+  <div class="col-lg-6 col-md-12 col-sm-12 login-form flex-column justify-content-around">
+    <div class="d-flex justify-content-center">
+      <svg-icon class="trot-logo" name="app-logo"></svg-icon>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <img class="mw-90" src="assets/images/auth-bg.png" alt="">
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <h3 class="powered-by-text">Powered by <b>Techbloom</b></h3>
+    </div>
+  </div>
+
+  <div class="col-lg-5 col-md-12 col-sm-12 login-form flex-column">
+    <form [formGroup]="loginForm" (submit)="signIn()" autocomplete="off">
+      <div class="d-flex col-lg-12 col-md-12 col-sm-12">
+        <h1 class="login-msg">Sign in to your Account</h1>
+      </div>
+
+      <div class="d-flex justify-content-around">
+        <p-tabView (onChange)="onTabSelection($event)">
+          <p-tabPanel header="As a Teacher"></p-tabPanel>
+          <p-tabPanel header="As a Student"></p-tabPanel>
+        </p-tabView>
+      </div>
+
+      <div class="d-flex col-md-12 col-sm-12 login-section">
+        <app-form-control class="mt-2">
+          <svg-icon name="user"></svg-icon>
+          <input class="input-style" type="text" formControlName="loginEmail" id="loginEmail" pInputText placeholder="Username"
+                 autocomplete="off">
+        </app-form-control>
+      </div>
+
+      <div class="d-flex col-md-12 col-sm-12 login-section mt-2">
+        <app-form-control class="mt-2">
+          <svg-icon name="lock"></svg-icon>
+          <input class="input-style" type="password" pInputText formControlName="loginPassword" id="loginPassword" placeholder="Password"
+                 autocomplete="off">
+        </app-form-control>
+      </div>
+
+      <div class="d-flex col-lg-12 col-md-12 col-sm-12 mt-4 login-section">
+        <div class="col-lg-10">
+          <ngx-recaptcha2 (expire)="handleCaptchaExpire()" (success)="handleCaptchaSuccess($event)" formControlName="recaptcha"
+                          [siteKey]="siteKey">
+          </ngx-recaptcha2>
+        </div>
+      </div>
+
+      <div class="d-flex col-md-12 col-sm-12 login-section mt-4">
+        <div class="col-lg-10">
+          <p-checkbox [binary]="true" formControlName="rememberMe" label="Remember Me"></p-checkbox>
+        </div>
+      </div>
+
+      <div class="d-flex col-md-12 col-sm-12 mt-4">
+        <button pButton type="submit" label="Login" class="ui-button-primary w-80" [disabled]="isLoading"></button>
+      </div>
+
+      <div class="separator">
+        <div class="line"></div>
+        <div id="or">OR</div>
+        <div class="line"></div>
+      </div>
+
+      <div class="d-flex justify-content-center mt-4">
+        <a class="mr-2" (click)="loginWithGoogle()">
+          <img src="/assets/svgs/google.svg" alt="">
+        </a>
+
+        <a class="ml-2" (click)="loginWithFacebook()">
+          <img src="/assets/svgs/facebook.svg" alt="">
+        </a>
+      </div>
+    </form>
+
+    <div class="auth-footer">
+      <span>Don’t have an account</span>
+      <span class="text-sign" (click)="gotoRegistration()">Sign up</span>
+    </div>
+  </div>
+
+</div>

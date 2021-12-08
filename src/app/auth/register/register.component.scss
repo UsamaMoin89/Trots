@@ -1,0 +1,90 @@
+.p-0 {
+  padding: 0;
+}
+
+.register-heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #1D1D1D;
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin: auto;
+}
+
+.show-icon {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  right: 35px;
+}
+
+.btn-signup {
+  width: 60%;
+}
+
+@media only screen and (max-width: 1560px) {
+  .btn-signup {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .btn-signup {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container-wrapper .login-form {
+    height: unset;
+    display: block;
+  }
+
+  .auth-footer {
+    bottom: -10%;
+    left: 20%;
+    padding-bottom: 10px;
+  }
+}
+
+.cc-section {
+  display: flex;
+  border-bottom: 1px solid #D7D7D7;
+  align-items: flex-end;
+  padding-bottom: 5px;
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.cc-code {
+  max-width: 120px;
+
+  input {
+    border-bottom: unset !important;
+    padding: 0 0 0 10px;
+    position: relative;
+    bottom: -5px;
+  }
+}
+
+.flag-image {
+  width: 30px;
+}
+
+:host ::ng-deep {
+  p-dropdown .ui-dropdown {
+    min-width: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    height: 31px;
+
+    .ui-dropdown-trigger {
+      display: none;
+    }
+  }
+}

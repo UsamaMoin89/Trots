@@ -1,0 +1,75 @@
+.ui-dynamicdialog {
+  background: $white;
+  border-radius: 20px;
+
+  &.large-close-icon {
+    .ui-dialog-titlebar-close {
+      width: 35px;
+      height: 34px;
+      background-size: cover;
+    }
+  }
+
+  .ui-dialog-title {
+    color: $primary;
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+
+  .ui-dialog-titlebar {
+    padding: 15px 70px;
+    border-bottom: 1px solid $bodybg;
+
+    &-close {
+      background: url('/assets/svgs/close.svg') no-repeat;
+      width: 25px;
+      height: 24px;
+      margin-top: 10px;
+
+      .pi {
+        display: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    padding: 15px 70px;
+  }
+}
+
+.ui-dialog {
+  background: $white;
+}
+
+.ui-dialog-mask {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+.ui-confirmdialog {
+  background: $white;
+  border-radius: 20px;
+
+  .ui-dialog-footer {
+
+    .ui-confirmdialog-acceptbutton, .ui-confirmdialog-rejectbutton {
+      border-radius: 10px;
+      color: $white;
+      border: 0;
+    }
+
+    .ui-confirmdialog-acceptbutton {
+      //background: $primary;
+      background-image: $btn-primary;
+    }
+
+    .ui-confirmdialog-rejectbutton {
+      background: $lightgrey;
+      margin-left: 30px;
+    }
+  }
+}

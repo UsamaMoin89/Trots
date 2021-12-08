@@ -1,0 +1,31 @@
+.ui-tabview {
+  &-nav {
+    display: flex;
+
+    li {
+      flex: 1;
+      margin: 10px !important;
+      padding: 19px 40px !important;
+      text-align: center;
+      background: $btn-secondary;
+      border-radius: 11px;
+      transition: .3s;
+      color: $text-color;
+
+      &:focus, &:active {
+        outline: none;
+      }
+
+      a {
+        padding: 0 !important;
+        float: none !important;
+        width: 100% !important;
+      }
+
+      &.ui-tabview-selected {
+        background: $btn-primary;
+        color: $white;
+      }
+    }
+  }
+}

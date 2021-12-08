@@ -1,0 +1,43 @@
+.control-wrapper {
+  position: relative;
+
+  .invalid-content {
+    color: #FF061B;
+    font-size: 12px;
+    margin-left: 2px;
+    position: absolute;
+    bottom: -18px;
+    left: 15px;
+  }
+}
+
+.form-group {
+  label {
+    font-size: 20px;
+    color: #54677C;
+  }
+
+  .ui-inputtext:not(.ui-dropdown-label) {
+    padding: 9px 17px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid #D4D4D4 !important;
+  }
+
+  p-inputMask {
+    display: block;
+
+    .ui-inputtext {
+      border: 1px solid #D4D4D4 !important;
+    }
+    &.ng-touched.ng-invalid {
+      .ui-inputtext {
+        border: 1px solid #FF061B !important;
+      }
+    }
+  }
+}
+
+.ui-inputtext.ng-dirty.ng-invalid, .ui-inputtext.ng-touched.ng-invalid {
+  border-color: #FF061B !important;
+}

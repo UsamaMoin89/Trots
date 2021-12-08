@@ -1,0 +1,4 @@
+<div [class]="'control-wrapper ' + class" *ngIf='fcn' [ngClass]="{ 'has-error': isHighlighted }">
+  <ng-content></ng-content>
+  <span class="invalid-content" *ngIf='isHighlighted'>{{ getError() }}</span>
+</div>

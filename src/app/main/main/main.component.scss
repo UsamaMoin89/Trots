@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+
+.app-wrapper {
+  height: 100%;
+  display: flex;
+
+  .app-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+  }
+
+  .app-content {
+    margin-left: 90px;
+    flex: 1;
+
+    .app-topbar {
+      height: 90px;
+      background: $white;
+    }
+
+    .content-wrapper {
+      padding: 40px 30px;
+      overflow: auto;
+    }
+
+  }
+}

@@ -1,0 +1,23 @@
+.m-auto {
+  margin: auto;
+}
+
+.svg-border-right {
+  border-right: 0.8px solid rgba(0, 0, 0, 0.15);
+  padding-right: 12px;
+}
+
+.show-icon {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  right: 35px;
+}
+
+:host ::ng-deep {
+  .ui-inputtext {
+    padding: 22px 40px 22px 70px !important;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.03);
+    color: #41444A96;
+  }
+}
