@@ -18,11 +18,6 @@ const routes: Routes = [
     component: AdminPanelComponent,
     children: [
       {
-        path: '',
-        redirectTo: '/manage/auth/login',
-        pathMatch: 'full'
-      },
-      {
         path: 'dashboard',
         component: DashboardComponent
       },

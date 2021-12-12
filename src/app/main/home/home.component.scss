@@ -1,0 +1,81 @@
+.banner-container {
+  background-image: url("../../../assets/images/main-home-banner.png");
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: scroll;
+  opacity: 1;
+
+  h1 {
+    font-family: Poppins, serif;
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: 0.045em;
+    color: #263238;
+    font-style: italic;
+  }
+
+  > div {
+    display: flex;
+  }
+
+  .contact-us-container {
+    padding: 20px;
+
+    h3 {
+      font-family: Poppins, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 37px;
+      letter-spacing: 0.045em;
+      color: #263238;
+      text-shadow: rgb(255 255 255) 12px 3px 3px;
+    }
+  }
+}
+
+.launching-container {
+  background-image: url("../../../assets/images/luanching.png");
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: scroll;
+  opacity: 1;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+
+  h2 {
+    font-family: Poppins, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 0.045em;
+    color: #FFFFFF;
+  }
+}
+
+:host::ng-deep {
+  .contact-us-button {
+    background: linear-gradient(90.52deg, rgba(79, 152, 228, 0.7) 0.46%, rgba(202, 41, 249, 0.7) 99.65%);
+    border-radius: 11px;
+    margin-bottom: 10px;
+
+    .ui-button-text {
+      font-family: Poppins, serif;
+      font-style: normal !important;
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      line-height: 30px !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      color: #FFFFFF !important;
+
+    }
+  }
+}

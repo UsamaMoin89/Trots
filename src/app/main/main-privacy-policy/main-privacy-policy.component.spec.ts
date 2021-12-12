@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarComponent } from './sidebar.component';
+import { MainPrivacyPolicyComponent } from './main-privacy-policy.component';
 
-describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+describe('MainPrivacyPolicyComponent', () => {
+  let component: MainPrivacyPolicyComponent;
+  let fixture: ComponentFixture<MainPrivacyPolicyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ]
+      declarations: [ MainPrivacyPolicyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarComponent);
+    fixture = TestBed.createComponent(MainPrivacyPolicyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

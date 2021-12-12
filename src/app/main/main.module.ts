@@ -1,21 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainRouting } from './main.routing';
 import { MainComponent } from './main/main.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { TopbarComponent } from './topbar/topbar.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { MainPrivacyPolicyComponent } from './main-privacy-policy/main-privacy-policy.component';
+import { MainTermsAndConditionsComponent } from './main-terms-and-conditions/main-terms-and-conditions.component';
 
 @NgModule({
     declarations: [
-        DashboardComponent,
         MainComponent,
-        SidebarComponent,
-        TopbarComponent
-    ],
-    exports: [
-        SidebarComponent
+        HomeComponent,
+        ContactComponent,
+        MainPrivacyPolicyComponent,
+        MainTermsAndConditionsComponent
     ],
     imports: [
         CommonModule,
