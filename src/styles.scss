@@ -2,6 +2,11 @@
 @import "styles/custom";
 @import "styles/variables";
 
+.block-body-scroll{
+  height: 100%;
+  overflow: hidden;
+}
+
 .container-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -234,4 +239,37 @@
 *::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #cbd1d4;
+}
+
+.panel-heading {
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.045em;
+  color: #263238;
+  margin-bottom: 20px;
+}
+
+.ui-table-thead tr th {
+  font-family: Poppins, serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+  letter-spacing: 0.065em !important;
+  color: #263238 !important;
+}
+
+.ui-table-tbody tr td {
+  font-family: Poppins, serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 17px !important;
+  line-height: 25px !important;
+  letter-spacing: 0.045em !important;
+  color: #263238 !important;
 }

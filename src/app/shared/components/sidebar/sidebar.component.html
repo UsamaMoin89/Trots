@@ -1,0 +1,67 @@
+
+<div class="side-bar-container">
+  <div class="show-in-mobile">
+    <div class="logo-container d-flex justify-content-center align-items-center">
+      <img src="../../../../assets/images/app-logo.png" alt="app-logo.png">
+    </div>
+    <i class="pi pi-bars" (click)="blockBodyScroll()"></i>
+  </div>
+  <div class="show-in-desktop">
+    <div class="logo-container d-flex justify-content-center align-items-center">
+      <img src="../../../../assets/images/app-logo.png" alt="app-logo.png">
+    </div>
+  </div>
+
+  <div class="menu-container" [class.hide-sidebar]="!showSideBar" [class.show-sidebar]="showSideBar" >
+    <ul>
+      <li routerLink="./dashboard" routerLinkActive="active">
+        <a>
+          <svg-icon name="dashboard"></svg-icon>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li routerLink="./tutors" routerLinkActive="active">
+        <a>
+          <svg-icon name="tutors"></svg-icon>
+          <span>Tutors</span>
+        </a>
+      </li>
+      <li routerLink="./students" routerLinkActive="active">
+        <a>
+          <svg-icon name="students"></svg-icon>
+          <span>Students</span>
+        </a>
+      </li>
+      <li routerLink="./accounts" routerLinkActive="active">
+        <a>
+          <svg-icon name="accounts"></svg-icon>
+          <span>Accounts</span>
+        </a>
+      </li>
+      <li routerLink="./active-session" routerLinkActive="active">
+        <a>
+          <svg-icon name="active-session"></svg-icon>
+          <span>Action Session</span>
+        </a>
+      </li>
+      <li routerLink="./add-quizes" routerLinkActive="active">
+        <a>
+          <svg-icon name="add-quizes"></svg-icon>
+          <span>Add Quizes</span>
+        </a>
+      </li>
+      <li routerLink="./terms-and-conditions" routerLinkActive="active">
+        <a>
+          <svg-icon name="terms-and-conditions"></svg-icon>
+          <span>Terms And Conditions</span>
+        </a>
+      </li>
+      <li routerLink="./privacy-policy" routerLinkActive="active">
+        <a>
+          <svg-icon name="privacy-policy"></svg-icon>
+          <span>Privacy Policy</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

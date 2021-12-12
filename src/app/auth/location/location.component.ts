@@ -43,7 +43,7 @@ export class LocationComponent implements OnInit {
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
 
-      this.geoCoder = new google.maps.Geocoder();
+      // this.geoCoder = new google.maps.Geocoder();
     });
   }
 

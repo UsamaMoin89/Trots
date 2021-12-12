@@ -32,6 +32,8 @@ import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 import { FormControlComponent } from './components/form-control/form-control.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { OverlayComponent } from './overlay/overlay.component';
 
 const PROVIDERS = [
@@ -76,7 +78,9 @@ const MODULES = [
 
 const COMPONENTS = [
   FormControlComponent,
-  OverlayComponent
+  OverlayComponent,
+  SidebarComponent,
+  HeaderComponent
 ];
 
 @NgModule({

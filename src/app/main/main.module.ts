@@ -8,17 +8,20 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    MainComponent,
-    SidebarComponent,
-    TopbarComponent
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    MainRouting
-  ]
+    declarations: [
+        DashboardComponent,
+        MainComponent,
+        SidebarComponent,
+        TopbarComponent
+    ],
+    exports: [
+        SidebarComponent
+    ],
+    imports: [
+        CommonModule,
+        SharedModule,
+        MainRouting
+    ]
 })
 export class MainModule {
 }

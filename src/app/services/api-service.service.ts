@@ -29,18 +29,14 @@ export class ApiServiceService {
   }
 
   getAllSubjects(): Observable<any> {
-    try {
-      const headers = {
-        'content-type': 'application/json',
-        apikey: this.envData.apiAccessKey
-      };
+    const headers = {
+      'content-type': 'application/json',
+      apikey: this.envData.apiAccessKey
+    };
 
-      const url = `${this.envData.apiConn}Subject/getsubjects?classid=-1`;
+    const url = `${this.envData.apiConn}Subject/getsubjects?classid=-1`;
 
-      return this.httpClient.get(url, {headers});
-    } catch (e) {
-      console.log('Error', e);
-    }
+    return this.httpClient.get(url, {headers});
   }
 
   getCountriesList(): Observable<any> {
