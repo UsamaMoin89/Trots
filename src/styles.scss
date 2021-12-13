@@ -2,6 +2,10 @@
 @import "styles/custom";
 @import "styles/variables";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .block-body-scroll{
   height: 100%;
   overflow: hidden;

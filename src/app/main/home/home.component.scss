@@ -6,6 +6,7 @@
   background-size: cover;
   background-attachment: scroll;
   opacity: 1;
+  margin-top: 88px;
 
   h1 {
     font-family: Poppins, serif;
@@ -19,6 +20,7 @@
 
   > div {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .contact-us-container {
@@ -76,6 +78,34 @@
       text-transform: uppercase !important;
       color: #FFFFFF !important;
 
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .banner-container {
+    padding: 15px !important;
+    background-position: 22% 0 !important;
+
+    h1, h3 {
+      text-align: center;
+    }
+
+    > div {
+      justify-content: center;
+
+      .contact-us-container {
+        display: grid;
+        align-content: center;
+      }
+    }
+  }
+
+  .launching-container {
+    padding: 15px !important;
+
+    h2 {
+      text-align: center;
     }
   }
 }

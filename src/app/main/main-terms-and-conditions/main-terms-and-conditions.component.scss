@@ -1,7 +1,19 @@
 .terms-and-conditions-container {
   padding: 60px 60px 0 60px;
 
-  pre {
+  h1 {
+    font-family: Poppins, serif;
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: 0.045em;
+    color: #263238;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  p {
     font-family: Poppins, serif;
     font-style: normal;
     font-weight: normal;
@@ -9,5 +21,16 @@
     line-height: 24px;
     letter-spacing: 0.045em;
     color: #747474;
+    word-break: break-word;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .terms-and-conditions-container {
+    padding: 15px 15px 0 15px !important;
+
+    h1 {
+      font-size: 35px !important;
+    }
   }
 }
