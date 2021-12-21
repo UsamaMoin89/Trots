@@ -1,65 +1,90 @@
-.agreement-bg {
+.container {
+  padding: 20px;
+}
+
+.logo-container {
+  padding: 20px 0 40px 0;
+}
+
+h3 {
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.055em;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.account-container {
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 30px 100px;
 
-  .agreement-section {
-    padding: 45px 90px;
-
-    .description {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 27px;
-      letter-spacing: 0.055em;
-      color: #333333;
-    }
+  p {
+    font-family: Poppins, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.055em;
+    color: #333333;
   }
 }
 
-.agreement-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+:host::ng-deep{
+  .ui-chkbox-box {
+    border: unset !important;
+    width: 30px !important;
+    height: 32px !important;
+    margin: 20px 0 !important;
+    position: relative !important;
+  }
 
-:host ::ng-deep {
-  .pi-check:before {
-    content: url('../../../assets/images/tick.png');
-    position: relative;
-    top: -4px;
+  .ui-chkbox-box::before {
+    content: url("../../../assets/svgs/checkbox-box.svg");
+  }
+
+  .ui-chkbox-box.ui-state-active {
+    background: #FFFFFF !important;
+  }
+
+  .ui-chkbox-box.ui-state-active .ui-chkbox-icon::before{
+    content: url("../../../assets/svgs/checkbox-tick.svg");
+  }
+
+  .ui-chkbox-icon {
+    position: absolute;
+    top: 0;
     right: -6px;
   }
 
-  p-checkbox .ui-chkbox .ui-chkbox-box {
-    border: 2px solid #A182F1;
-    height: 32px;
-    width: 30px;
-  }
-
-  p-checkbox .ui-chkbox .ui-chkbox-box.ui-state-active {
-    border: 2px solid #A182F1;
-    background: unset;
-  }
-
-  p-checkbox label {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.03em;
-    color: #666666;
-    margin-left: 20px;
+  .ui-chkbox-label {
+    font-family: Poppins, serif !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    letter-spacing: 0.03em !important;
+    color: #666666 !important;
+    margin-left: 40px !important;
   }
 
   .ui-inputtext {
-    padding: 15px 20px;
+    border: 1px solid;
+    border-image: linear-gradient(45deg, rgba(79, 152, 228, 0.3), rgba(202, 41, 249, 0.3)) 1 !important;
+    font-family: Poppins, serif;
     font-style: normal;
     font-weight: normal;
-    border-radius: 8px;
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.03em;
     color: rgba(196, 196, 196, 0.75);
+    margin: 20px 0;
+    padding: 10px 40px;
+    width: 40%;
   }
 }

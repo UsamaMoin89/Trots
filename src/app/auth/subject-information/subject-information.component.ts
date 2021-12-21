@@ -10,80 +10,67 @@ import { ToastService } from '../../services/toast.service';
 })
 export class SubjectInformationComponent implements OnInit {
 
+  selectedGeneralCategory;
+  selectedSubCategory;
   isLoading = false;
-  selectSubject = true;
-  addCertificates = false;
-
   generalCategory = [];
   subCategory = [];
-
-  selGenCategory;
-  selSubCategory;
-
   selectedSubjects = [];
 
   constructor(
-    private router: Router, private toastService: ToastService, private apiService: ApiServiceService
+    private router: Router,
+    private toastService: ToastService,
+    private apiService: ApiServiceService
   ) {
   }
 
   async ngOnInit(): Promise<void> {
     this.isLoading = true;
-    this.selectSubject = true;
 
-    await this.apiService.getAllClasses().subscribe(res => {
-      if (res.statuscode === 200) {
+    await this.getAllClasses();
+
+    await this.getAllSubjects();
+
+    this.isAlreadySubjectsSelected();
+
+    this.isLoading = false;
+  }
+
+  getAllClasses(): Promise<any> {
+    return new Promise(resolve => {
+      this.apiService.getAllClasses().subscribe(res => {
         this.subCategory = res.result;
-      }
-    });
-
-    await this.apiService.getAllSubjects().subscribe(res => {
-      if (res.statuscode === 200) {
-        this.generalCategory = res.result;
-      }
-
-      this.selGenCategory = null;
-      this.selSubCategory = null;
-
-      this.isLoading = false;
+        resolve(true);
+      }, error => {
+        this.toastService.error(error.reason);
+        resolve(true);
+      });
     });
   }
 
-  navigateToUrl(userLoc: string, action): void {
-    if (this.selectSubject) {
-      if (action === 'back') {
-        this.router.navigateByUrl(`auth/${userLoc}`);
-      } else {
-        this.selectSubject = !this.selectSubject;
-        this.addCertificates = !this.addCertificates;
-      }
-    } else if (this.addCertificates) {
-      if (action === 'back') {
-        this.selectSubject = !this.selectSubject;
-        this.addCertificates = !this.addCertificates;
-      } else {
-        console.log('Save subject information');
-        this.isLoading = true;
+  getAllSubjects(): Promise<any> {
+    return new Promise(resolve => {
+      this.apiService.getAllSubjects().subscribe(res => {
+        this.generalCategory = res.result;
+        resolve(true);
+      }, error => {
+        this.toastService.error(error.reason);
+        resolve(true);
+      });
+    });
+  }
 
-        this.apiService.fnAddSubjectInfo(this.selectedSubjects).subscribe(rtnData => {
-          this.isLoading = false;
-
-          if (rtnData.statuscode === 200) {
-            this.toastService.success(rtnData.message);
-            this.router.navigateByUrl(`auth/${userLoc}`);
-          } else {
-            this.toastService.error(rtnData.message);
-          }
-        });
-      }
+  isAlreadySubjectsSelected(): void {
+    if (localStorage.getItem('SELECTED_SUBJECTS')) {
+      this.selectedSubjects = JSON.parse(localStorage.getItem('SELECTED_SUBJECTS'));
     }
   }
 
   addSubject(): void {
-    if (this.selGenCategory && this.selSubCategory) {
+    if (this.selectedGeneralCategory && this.selectedSubCategory) {
       this.selectedSubjects.push({
-        classInfo: this.selSubCategory,
-        subjectInfo: this.selGenCategory,
+        classInfo: this.selectedSubCategory,
+        subjectInfo: this.selectedGeneralCategory,
         experience: null,
         subjectfee: null,
         document: null,
@@ -93,23 +80,16 @@ export class SubjectInformationComponent implements OnInit {
       });
     }
 
-    this.selGenCategory = null;
-    this.selSubCategory = null;
+    this.selectedGeneralCategory = null;
+    this.selectedSubCategory = null;
   }
 
-  uploadSubjectCertificate(event: any, selSub): void {
-    const file = event.target.files[0];
-    this.isLoading = true;
+  onBackClick(): void {
+    this.router.navigateByUrl('auth/institute').then();
+  }
 
-    selSub.document = file;
-    this.apiService.postCertificate(selSub).subscribe(res => {
-      this.isLoading = false;
-
-      if (res.statuscode === 200) {
-        selSub.documentPath = res.documentPath;
-      } else {
-        this.toastService.error(res.message);
-      }
-    });
+  onNextClick(): void {
+    localStorage.setItem('SELECTED_SUBJECTS', JSON.stringify(this.selectedSubjects));
+    this.router.navigateByUrl('auth/selected-subjects');
   }
 }

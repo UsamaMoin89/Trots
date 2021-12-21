@@ -30,7 +30,9 @@ const ICONS = [
   {src: '/assets/svgs/logout.svg', name: 'logout'},
   {src: '/assets/svgs/subject.svg', name: 'subject'},
   {src: '/assets/svgs/username.svg', name: 'username'},
-  {src: '/assets/svgs/password.svg', name: 'password'}
+  {src: '/assets/svgs/password.svg', name: 'password'},
+  {src: '/assets/svgs/previous.svg', name: 'previous'},
+  {src: '/assets/svgs/next.svg', name: 'next'}
 ];
 
 @Injectable({

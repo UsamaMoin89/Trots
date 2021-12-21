@@ -1,0 +1,91 @@
+.container {
+  padding: 20px;
+}
+
+.logo-container {
+  padding: 20px 0 40px 0;
+}
+
+h3 {
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.055em;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.subjects-for-quiz-container {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 30px 100px;
+
+  .subject-container {
+    border: 1px solid;
+    border-image: linear-gradient(45deg, rgba(79, 152, 228, 0.3), rgba(202, 41, 249, 0.3)) 1 !important;
+    font-family: Poppins, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.055em;
+    color: #333333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .subject-name {
+      font-family: Poppins, serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 0.055em;
+      color: #333333;
+    }
+
+    .test-details {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        padding: 10px 0;
+        font-family: Poppins, serif;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 138.7%;
+        letter-spacing: 0.055em;
+        color: #333333;
+      }
+    }
+  }
+}
+
+:host::ng-deep {
+  .button-container{
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .ui-button {
+      background: linear-gradient(90.52deg, rgba(79, 152, 228, 0.5) 0.46%, rgba(202, 41, 249, 0.5) 99.65%);
+      border-radius: 13px;
+    }
+
+    .ui-button-text {
+      font-family: Poppins, serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.025em;
+      color: #FFFFFF;
+    }
+  }
+}

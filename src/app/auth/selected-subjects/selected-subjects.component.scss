@@ -1,0 +1,112 @@
+.container {
+  padding: 20px;
+}
+
+.logo-container {
+  padding: 20px 0 40px 0;
+}
+
+h3 {
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.055em;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.selected-subjects-container {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  padding: 30px 250px;
+  margin-bottom: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.subjects-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  .subject-header-container {
+    background: linear-gradient(90.18deg, rgba(79, 152, 228, 0.6) 6.64%, rgba(202, 41, 249, 0.6) 99.84%);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+
+    span {
+      font-family: Poppins, serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.055em;
+      color: #FFFFFF;
+    }
+  }
+
+  .subject-body-container {
+    padding: 50px 100px;
+
+    .field-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      label {
+        text-align: center;
+      }
+    }
+
+    .file-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      width: 100%;
+      border: 1px solid;
+      border-image: linear-gradient(45deg, rgba(79, 152, 228, 0.3), rgba(202, 41, 249, 0.3)) 1 !important;
+      cursor: pointer;
+
+      span {
+        font-family: Poppins, serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.03em;
+        color: #C4C4C4;
+        margin-bottom: 20px;
+      }
+    }
+
+    span {
+      margin: 0 25px;
+      position: relative;
+      top: 7px;
+    }
+  }
+}
+
+.subjects-container:last-child {
+  margin-bottom: 0 !important;
+}
+
+:host::ng-deep {
+  .field-container {
+    .ui-inputtext {
+      border-radius: 13px !important;
+      border: 1px solid !important;
+      border-image: linear-gradient(45deg, rgba(79, 152, 228, 0.3), rgba(202, 41, 249, 0.3)) 1 !important;
+      text-align: center !important;
+    }
+  }
+}

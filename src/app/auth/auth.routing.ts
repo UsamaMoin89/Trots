@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { QuestionnairesComponent } from './questionnaires/questionnaires.component';
 import { RegisterComponent } from './register/register.component';
 import { SubjectInformationComponent } from './subject-information/subject-information.component';
+import {SelectedSubjectsComponent} from "./selected-subjects/selected-subjects.component";
+import {ComplianceComponent} from "./compliance/compliance.component";
+import {SubjectsForQuizComponent} from "./subjects-for-quiz/subjects-for-quiz.component";
 
 const routes: Routes = [
   {
@@ -35,12 +38,24 @@ const routes: Routes = [
         component: SubjectInformationComponent
       },
       {
+        path: 'selected-subjects',
+        component: SelectedSubjectsComponent
+      },
+      {
         path: 'attempt-test',
         component: QuestionnairesComponent
       },
       {
         path: 'agreement',
         component: AgreementComponent
+      },
+      {
+        path: 'compliance',
+        component: ComplianceComponent
+      },
+      {
+        path: 'subjects-for-quiz',
+        component: SubjectsForQuizComponent
       }
     ]
   }

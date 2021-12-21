@@ -1,0 +1,55 @@
+.container {
+  padding: 20px;
+}
+
+.logo-container {
+  padding: 20px 0 40px 0;
+}
+
+h3 {
+  font-family: Poppins, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.055em;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.tutor-declaration-form-container {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 30px 100px;
+
+  p {
+    font-family: Poppins, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.055em;
+    color: #333333;
+  }
+
+  ul {
+    padding-left: 25px !important;
+  }
+
+  li {
+    font-family: Poppins, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 129.7%;
+    color: #333333;
+    padding: 10px 0;
+  }
+
+  li::marker {
+    height: 10px;
+    width: 10px;
+  }
+}

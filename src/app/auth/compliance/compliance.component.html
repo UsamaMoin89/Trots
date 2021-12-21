@@ -9,20 +9,24 @@
 
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="account-container">
-        <h3>Your Account</h3>
+      <div class="tutor-declaration-form-container">
+        <h3>Tutor Declaration Form</h3>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-        <p-checkbox [label]="'I accept the terms & Conditions'" [binary]="true" [(ngModel)]="acceptTermsAndCondition"></p-checkbox>
-        <input pInputText [(ngModel)]="signature" name="signature">
-        <p-checkbox [label]="'Use this as E-Signature'" [binary]="true" [(ngModel)]="useSignature"></p-checkbox>
+        <h3>I agree</h3>
+        <ul>
+          <li>Amet minim mollit non deserunt ullamco est sit</li>
+          <li>Amet minim mollit non deserunt ullamco est sit</li>
+          <li>Amet minim mollit non deserunt ullamco est sit</li>
+          <li>Amet minim mollit non deserunt ullamco est sit</li>
+          <li>Amet minim mollit non deserunt ullamco est sit</li>
+          <li>Amet minim mollit non deserunt ullamco est sit</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
-      <button icon="pi" iconPos="left" (click)="onBackClick()" class="back-button ui-button-primary" pButton label="Back" type="button">
-      </button>
+    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-end">
       <button icon="pi" iconPos="right" (click)="onNextClick()" class="next-button ui-button-primary" pButton label="Next" type="button">
       </button>
     </div>

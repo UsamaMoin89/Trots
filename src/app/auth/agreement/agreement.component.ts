@@ -11,24 +11,24 @@ import { UtilsService } from '../../services/utils.service';
 })
 export class AgreementComponent implements OnInit {
 
-  isLoading = false;
-  acceptTerms = false;
-  useESig = false;
-
-  eSig: string;
+  signature;
+  acceptTermsAndCondition = false;
+  useSignature = false;
 
   constructor(
-    private router: Router, private toastService: ToastService,
-    private utilsService: UtilsService, private apiService: ApiServiceService
-  ) {
-  }
+    private router: Router,
+    private toastService: ToastService
+  ) {}
 
   ngOnInit(): void {
     //
   }
 
-  navigateToUrl(userLoc: string): void {
-    this.toastService.success(`navigate to ${userLoc}`);
-    this.router.navigateByUrl(`auth/${userLoc}`);
+  onBackClick(): void {
+    this.router.navigateByUrl('auth/selected-subjects').then();
+  }
+
+  onNextClick(): void {
+    this.router.navigateByUrl('auth/compliance').then();
   }
 }
